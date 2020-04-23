@@ -1,6 +1,7 @@
 package ht.ferit.fjjukic.rma_lv2
 
 import android.view.View
+import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
@@ -24,7 +25,6 @@ class InspiringPeopleViewHolder constructor(
             .load(inspiringPerson.imagePath)
             .into(itemView.inspiringPersonImg)
 
-        itemView.setOnClickListener { inspiringPeopleListener.onShowQuote(inspiringPerson.id) }
-
+        itemView.inspiringPersonImg.setOnClickListener { inspiringPeopleListener.onShowQuote(inspiringPerson.id) }
     }
 }

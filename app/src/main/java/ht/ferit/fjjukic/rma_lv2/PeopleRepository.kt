@@ -33,10 +33,12 @@ object PeopleRepository {
                 mutableListOf("There are only two kinds of languages: the ones people complain about and the ones nobody uses.","If you think it's simple, then you have misunderstood the problem."), "android.resource://ht.ferit.fjjukic.rma_lv2/drawable/bjarnestroustrup"))
     }
     fun getListOfInspiringPeople(): MutableList<InspiringPerson> =  this.inspiringPeople
+    fun count(): Int =  this.inspiringPeople.count()
     fun removeInspiringPerson(index: Int) =  this.inspiringPeople.removeAt(index)
     fun addInspiringPerson(inspiringPerson: InspiringPerson) =  this.inspiringPeople.add(inspiringPerson)
-    fun getQuote(index: Int): String{
+    fun getQuote(id: Int): String{
         val randomNumber: Int = (0..1).random()
-        return this.inspiringPeople[index].quotes[randomNumber]
+        val person:InspiringPerson? = this.inspiringPeople.find { person -> person.id == id }
+            return person?.quotes?.get(randomNumber).toString()
     }
 }

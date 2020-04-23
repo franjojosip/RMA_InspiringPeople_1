@@ -8,7 +8,7 @@ android {
 
     defaultConfig {
         applicationId "ht.ferit.fjjukic.rma_lv2"
-        minSdkVersion 25
+        minSdkVersion 26
         targetSdkVersion 29
         versionCode 1
         versionName "1.0"
@@ -40,6 +40,8 @@ dependencies {
     //Glide
     implementation 'com.github.bumptech.glide:glide:4.11.0'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
+
+    //Float action button
     implementation 'com.google.android.material:material:1.1.0'
 
 }

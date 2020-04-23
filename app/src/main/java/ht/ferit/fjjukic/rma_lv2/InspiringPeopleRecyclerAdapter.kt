@@ -2,6 +2,7 @@ package ht.ferit.fjjukic.rma_lv2
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 
 class InspiringPeopleRecyclerAdapter(

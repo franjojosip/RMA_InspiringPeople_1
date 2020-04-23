@@ -1,11 +1,13 @@
 package ht.ferit.fjjukic.rma_lv2
 
-import androidx.appcompat.app.AppCompatActivity
+import android.content.Intent
 import android.os.Bundle
-import android.view.Window
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 import kotlinx.android.synthetic.main.activity_main.*
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -15,19 +17,40 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         initRecyclerView()
+        setFloatingActionButtonListener()
     }
 
     private fun initRecyclerView() {
-        val inspiringPeopleListener = object: InspiringPeopleListener{
+        val inspiringPeopleListener = object : InspiringPeopleListener {
             override fun onShowQuote(index: Int) {
-                Toast.makeText(applicationContext, PeopleRepository.getQuote(index), Toast.LENGTH_SHORT).show()
+                Toast.makeText(
+                    applicationContext,
+                    PeopleRepository.getQuote(index),
+                    Toast.LENGTH_SHORT
+                ).show()
             }
         }
 
         recyclerView.apply {
             layoutManager = LinearLayoutManager(this@MainActivity)
-            this@MainActivity.inspiringPersonAdapter = InspiringPeopleRecyclerAdapter(PeopleRepository.getListOfInspiringPeople(), inspiringPeopleListener)
+            this@MainActivity.inspiringPersonAdapter = InspiringPeopleRecyclerAdapter(
+                PeopleRepository.getListOfInspiringPeople(),
+                inspiringPeopleListener
+            )
             adapter = this@MainActivity.inspiringPersonAdapter
         }
+    }
+
+    private fun setFloatingActionButtonListener() {
+        val fabAdd: FloatingActionButton = findViewById(R.id.fabAdd)
+        fabAdd.setOnClickListener {
+            val intent = Intent(this@MainActivity, NewInspiringPersonActivity::class.java)
+            startActivity(intent)
+        }
+    }
+
+    override fun onResume() {
+        super.onResume()
+        inspiringPersonAdapter.setNewInspiringPeopleList(PeopleRepository.getListOfInspiringPeople())
     }
 }

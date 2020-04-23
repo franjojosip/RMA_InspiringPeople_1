@@ -3,4 +3,15 @@
     <string name="inspiring_people">Inspiring People</string>
     <string name="description">Description:</string>
     <string name="date_of_birth">Date of birth:</string>
+    <string name="add_new_inspiring_person">Add new inspiring person</string>
+    <string name="defaultDate">--/--/----</string>
+    <string name="enter_text_here">Enter text here</string>
+    <string name="short_description">Short description</string>
+    <string name="quotes">Quotes</string>
+    <string name="quote1">Enter quote 1 here</string>
+    <string name="quote2">Enter quote 2 here</string>
+    <string name="choose_image">Choose image</string>
+    <string name="inspiring_person_image">Inspiring person image</string>
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
 </resources>
