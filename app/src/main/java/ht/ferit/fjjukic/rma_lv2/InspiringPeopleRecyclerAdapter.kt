@@ -1,11 +1,8 @@
-package ht.ferit.fjjukic.rma_lv2.recyclerView
+package ht.ferit.fjjukic.rma_lv2
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import ht.ferit.fjjukic.rma_lv2.interfaces.InspiringPeopleListener
-import ht.ferit.fjjukic.rma_lv2.R
-import ht.ferit.fjjukic.rma_lv2.models.InspiringPerson
 
 class InspiringPeopleRecyclerAdapter(
 

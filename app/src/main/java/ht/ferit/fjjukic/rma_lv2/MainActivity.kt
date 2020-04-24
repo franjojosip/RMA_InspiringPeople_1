@@ -1,4 +1,4 @@
-package ht.ferit.fjjukic.rma_lv2.activities
+package ht.ferit.fjjukic.rma_lv2
 
 import android.content.Intent
 import android.os.Bundle
@@ -6,10 +6,6 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.android.material.floatingactionbutton.FloatingActionButton
-import ht.ferit.fjjukic.rma_lv2.interfaces.InspiringPeopleListener
-import ht.ferit.fjjukic.rma_lv2.recyclerView.InspiringPeopleRecyclerAdapter
-import ht.ferit.fjjukic.rma_lv2.R
-import ht.ferit.fjjukic.rma_lv2.repository.PeopleRepository
 import kotlinx.android.synthetic.main.activity_main.*
 
 

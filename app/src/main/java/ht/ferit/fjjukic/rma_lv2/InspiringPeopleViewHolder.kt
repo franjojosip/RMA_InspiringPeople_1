@@ -1,12 +1,12 @@
-package ht.ferit.fjjukic.rma_lv2.recyclerView
+package ht.ferit.fjjukic.rma_lv2
 
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
-import ht.ferit.fjjukic.rma_lv2.interfaces.InspiringPeopleListener
+import ht.ferit.fjjukic.rma_lv2.InspiringPeopleListener
 import ht.ferit.fjjukic.rma_lv2.R
-import ht.ferit.fjjukic.rma_lv2.models.InspiringPerson
+import ht.ferit.fjjukic.rma_lv2.InspiringPerson
 import kotlinx.android.synthetic.main.inspiring_people_list_item.view.*
 
 class InspiringPeopleViewHolder constructor(

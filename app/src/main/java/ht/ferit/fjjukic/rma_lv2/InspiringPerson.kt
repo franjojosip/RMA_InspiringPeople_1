@@ -1,4 +1,4 @@
-package ht.ferit.fjjukic.rma_lv2.models
+package ht.ferit.fjjukic.rma_lv2
 
 import java.time.LocalDate
 

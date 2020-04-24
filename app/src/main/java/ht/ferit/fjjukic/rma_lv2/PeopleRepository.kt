@@ -1,6 +1,5 @@
-package ht.ferit.fjjukic.rma_lv2.repository
+package ht.ferit.fjjukic.rma_lv2
 
-import ht.ferit.fjjukic.rma_lv2.models.InspiringPerson
 import java.time.LocalDate
 
 object PeopleRepository {

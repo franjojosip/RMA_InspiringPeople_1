@@ -1,4 +1,4 @@
-package ht.ferit.fjjukic.rma_lv2.activities
+package ht.ferit.fjjukic.rma_lv2
 
 import android.app.Activity
 import android.app.DatePickerDialog
@@ -10,10 +10,6 @@ import androidx.appcompat.app.AppCompatActivity
 import java.time.LocalDate
 import java.util.*
 import android.widget.Button
-import ht.ferit.fjjukic.rma_lv2.R
-import ht.ferit.fjjukic.rma_lv2.models.InspiringPerson
-import ht.ferit.fjjukic.rma_lv2.repository.CodeRepository
-import ht.ferit.fjjukic.rma_lv2.repository.PeopleRepository
 
 class NewInspiringPersonActivity : AppCompatActivity() {
     private lateinit var tvEnterDate: TextView
@@ -102,7 +98,11 @@ class NewInspiringPersonActivity : AppCompatActivity() {
         }
         return InspiringPerson(
             PeopleRepository.count() + 1,
-            LocalDate.of(this.dateOfBirth.year, this.dateOfBirth.month, this.dateOfBirth.dayOfMonth),
+            LocalDate.of(
+                this.dateOfBirth.year,
+                this.dateOfBirth.month,
+                this.dateOfBirth.dayOfMonth
+            ),
             this.etDescription.text.toString(),
             quotes,
             this.imagePath
