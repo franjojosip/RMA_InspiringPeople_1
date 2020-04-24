@@ -39,9 +39,9 @@ class NewInspiringPersonActivity : AppCompatActivity() {
         this.btnCancel = findViewById(R.id.btnCancel)
         this.btnChooseImage = findViewById(R.id.btnChooseImage)
 
-        btnSave.setOnClickListener {
+        this.btnSave.setOnClickListener {
             when {
-                tvEnterDate.text.isNotEmpty() && etDescription.text.isNotEmpty() && etQuote1.text.isNotEmpty() && etQuote2.text.isNotEmpty() && imagePath.isNotEmpty() -> {
+                this.tvEnterDate.text != "--/--/----" && this.etDescription.text.isNotEmpty() && this.etQuote1.text.isNotEmpty() && this.etQuote2.text.isNotEmpty() && this.imagePath.isNotEmpty() -> {
                     val person = createInspiringPerson()
                     PeopleRepository.addInspiringPerson(person)
                     onBackPressed()
@@ -55,11 +55,11 @@ class NewInspiringPersonActivity : AppCompatActivity() {
             }
         }
 
-        btnCancel.setOnClickListener {
+        this.btnCancel.setOnClickListener {
             onBackPressed()
         }
 
-        btnChooseImage.setOnClickListener {
+        this.btnChooseImage.setOnClickListener {
             if (checkSelfPermission(android.Manifest.permission.READ_EXTERNAL_STORAGE) ==
                 PackageManager.PERMISSION_DENIED
             ) {
@@ -102,10 +102,10 @@ class NewInspiringPersonActivity : AppCompatActivity() {
         }
         return InspiringPerson(
             PeopleRepository.count() + 1,
-            LocalDate.of(this.dateOfBirth.year, this.dateOfBirth.month, dateOfBirth.dayOfMonth),
+            LocalDate.of(this.dateOfBirth.year, this.dateOfBirth.month, this.dateOfBirth.dayOfMonth),
             this.etDescription.text.toString(),
             quotes,
-            imagePath
+            this.imagePath
         )
     }
 
