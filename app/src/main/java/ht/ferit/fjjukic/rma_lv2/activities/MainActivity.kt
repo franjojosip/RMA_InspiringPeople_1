@@ -37,13 +37,13 @@ class MainActivity : AppCompatActivity() {
         }
 
         recyclerView.apply {
-            layoutManager = LinearLayoutManager(this@MainActivity)
+            this.layoutManager = LinearLayoutManager(this@MainActivity)
             this@MainActivity.inspiringPersonAdapter =
                 InspiringPeopleRecyclerAdapter(
                     PeopleRepository.getListOfInspiringPeople(),
                     inspiringPeopleListener
                 )
-            adapter = this@MainActivity.inspiringPersonAdapter
+            this.adapter = this@MainActivity.inspiringPersonAdapter
         }
     }
 
@@ -57,6 +57,6 @@ class MainActivity : AppCompatActivity() {
 
     override fun onResume() {
         super.onResume()
-        inspiringPersonAdapter.setNewInspiringPeopleList(PeopleRepository.getListOfInspiringPeople())
+        this.inspiringPersonAdapter.setNewInspiringPeopleList(PeopleRepository.getListOfInspiringPeople())
     }
 }

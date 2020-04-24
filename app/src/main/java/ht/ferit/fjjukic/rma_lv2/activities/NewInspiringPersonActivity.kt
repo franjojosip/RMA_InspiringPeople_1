@@ -42,7 +42,7 @@ class NewInspiringPersonActivity : AppCompatActivity() {
         this.btnSave.setOnClickListener {
             when {
                 this.tvEnterDate.text != "--/--/----" && this.etDescription.text.isNotEmpty() && this.etQuote1.text.isNotEmpty() && this.etQuote2.text.isNotEmpty() && this.imagePath.isNotEmpty() -> {
-                    val person = createInspiringPerson()
+                    val person: InspiringPerson = createInspiringPerson()
                     PeopleRepository.addInspiringPerson(person)
                     onBackPressed()
 
